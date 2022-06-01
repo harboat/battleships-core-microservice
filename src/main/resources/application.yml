@@ -1,0 +1,52 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: core
+  data:
+    mongodb:
+      uri: ${mongo_uri}
+  rabbitmq:
+    addresses: ${rabbit_uri}
+    username: ${rabbit_username}
+    password: ${rabbit_password}
+  zipkin:
+    base-url: ${zipkin_base_url}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka_service_url}
+
+rabbitmq:
+  exchanges:
+    core: internal-core.exchange
+    notification: internal-notification.exchange
+    placement: internal-placement.exchange
+    game: internal-game.exchange
+    rooms: internal-rooms.exchange
+    config: internal-config.exchange
+  queues:
+    core: core.queue
+    notification: notification.queue
+  routing-keys:
+    core: internal.core.routing-key
+    notification: internal.notification.routing-key
+    game: internal.game.routing-key
+    placement: internal.placement.routing-key
+    rooms: internal.rooms.routing-key
+    config: internal.config.routing-key
+
+broker:
+  application-destination-prefix: ${rabbit_clients_stomp_application_destination}
+  destination-prefix: ${rabbit_clients_stomp_destination_prefix}
+  endpoint: ${rabbit_clients_stomp_endpoint}
+  relay-host: ${rabbit_clients_stomp_host}
+  relay-port: ${rabbit_clients_stomp_port}
+  client-login: ${rabbit_clients_stomp_username}
+  client-passcode: ${rabbit_clients_stomp_passcode}
+  system-login: ${rabbit_clients_username}
+  system-passcode: ${rabbit_clients_password}

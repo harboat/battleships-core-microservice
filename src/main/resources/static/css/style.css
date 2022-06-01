@@ -1,0 +1,413 @@
+:root {
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+}
+
+body {
+    transition: 0.8s;
+    background-color: var(--nord0);
+}
+
+
+.heightLabel {
+    text-align: center;
+    transition: 0.2s;
+    position: absolute;
+    width: 7.5vw;
+    height: 4vw;
+    top: 4.2vw;
+    left: 14.9vw;
+    background: var(--nord2);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord2);
+    font-size: 1vw;
+    color: var(--nord15);
+    cursor: default;
+}
+
+
+.widthLabel {
+    text-align: center;
+    transition: 0.2s;
+    position: absolute;
+    width: 7.5vw;
+    height: 4vw;
+    top: 4.2vw;
+    left: 7vw;
+    background: var(--nord2);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord2);
+    font-size: 1vw;
+    color: var(--nord15);
+    cursor: default;
+}
+
+.setBoardSizeButton {
+    transition: 0.2s;
+    position: absolute;
+    width: 15.45vw;
+    height: 3vw;
+    top: 10.25vw;
+    left: 7vw;
+    background: var(--nord2);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord2);
+    font-size: 1vw;
+    color: var(--nord15);
+}
+
+.setBoardSizeButton:hover {
+    background-color: var(--nord1);
+}
+
+.setBoardSizeButton:active {
+    background-color: var(--nord0);
+}
+
+
+.selectHeight {
+    text-align: center;
+    transition: 0.2s;
+    position: absolute;
+    width: 7.5vw;
+    height: 2vw;
+    top: 7.25vw;
+    left: 14.95vw;
+    background: var(--nord2);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord15);
+    font-size: 1vw;
+    color: var(--nord15);
+}
+
+.selectHeight:hover {
+    background-color: var(--nord0);
+}
+
+.selectWidth {
+    text-align: center;
+    transition: 0.2s;
+    position: absolute;
+    width: 7.5vw;
+    height: 2vw;
+    top: 7.25vw;
+    left: 7.05vw;
+    background: var(--nord2);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord15);
+    font-size: 1vw;
+    color: var(--nord15);
+}
+
+.selectWidth:hover {
+    background-color: var(--nord0);
+}
+
+.nukeButton {
+    transition: 0.2s;
+    position: absolute;
+    width: 6vw;
+    height: 3vw;
+    top: 1vw;
+    left: 20vw;
+    background: var(--nord13);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord11);
+    font-size: 1vw;
+    color: var(--nord0);
+    margin: 4.2vw auto;
+}
+
+.nukeButton:hover {
+    background: var(--nord12);
+    border-color: var(--nord13);
+}
+
+.nukeButton:target {
+    background: var(--nord11);
+}
+
+/*Buttons*/
+.menuButton {
+    transition: 0.2s;
+    position: absolute;
+    width: 40vw;
+    height: 5vw;
+    background: var(--nord0);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord4);
+    font-size: 1.5vw;
+}
+
+
+.fleetGenButton {
+    transition: 0.2s;
+    position: absolute;
+    width: 15vw;
+    height: 3vw;
+    bottom: 7.9vw;
+    left: 7vw;
+    background: var(--nord10);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord10);
+    font-size: 1vw;
+    color: var(--nord0);
+}
+
+.fleetGenButton:hover {
+    background: var(--nord9);
+}
+
+.fleetGenButton:active {
+    background: var(--nord0);
+}
+
+.startGameButton {
+    transition: 0.2s;
+    position: absolute;
+    width: 15vw;
+    height: 3vw;
+    bottom: 3.9vw;
+    left: 7vw;
+    background: var(--nord11);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord11);
+    font-size: 1vw;
+    color: var(--nord0);
+}
+
+.startGameButton:hover {
+    background: var(--nord12);
+}
+
+.startGameButton:active {
+    background: var(--nord0);
+}
+
+.forfeitButton {
+    transition: 0.2s;
+    position: absolute;
+    width: 6vw;
+    height: 3vw;
+    top: 1vw;
+    right: 1vw;
+    background: var(--nord11);
+    border-radius: 0.5vw;
+    border: solid 0.1vw;
+    border-color: var(--nord11);
+    font-size: 1vw;
+    color: var(--nord0);
+}
+
+.forfeitButton:hover {
+    background: var(--nord1);
+    color: var(--nord4)
+}
+
+.forfeitButton:active {
+    background-color: var(--nord0);
+}
+
+.menuButton:hover {
+    background: var(--nord1);
+    border-color: var(--nord0);
+}
+
+.gameCreate {
+    top: 10vw;
+}
+
+.gameJoin {
+    top: 16vw;
+}
+
+/*Text-Based*/
+.roomId {
+    transition: 0.5s;
+    color: var(--nord4);
+    margin: auto;
+    font-size: 0.8vw;
+    position: absolute;
+    text-align: left
+}
+
+.text {
+    color: var(--nord4);
+}
+
+.turn {
+    width: 40vw;
+    height: 3vw;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    border: solid;
+    border-color: var(--nord2);
+    background-color: var(--nord2);
+    top: 0.65vw;
+    left: 30vw;
+    position: absolute;
+    color: var(--nord15);
+    margin: auto;
+    font-size: 2vw;
+}
+
+.game-id {
+    position: absolute;
+    color: var(--nord4);
+    margin: auto;
+    font-size: 0.7vw;
+}
+
+/*Containers*/
+.boardContainer {
+    transition: 0.5s;
+    position: absolute;
+    left: 30vw;
+    margin: 4.2vw auto;
+    background-color: var(--nord0);
+    height: 40vw;
+    width: 40vw;
+    border: solid var(--nord0);
+    border-radius: 10px;
+}
+
+.container {
+    position: absolute;
+    margin: 4.2vw auto;
+    background-color: var(--nord1);
+    display: flex;
+    height: 40vw;
+    width: 40vw;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border: solid var(--nord1);
+    border-radius: 10px;
+}
+
+.player {
+    left: -50vw;
+    opacity: 0;
+}
+
+.enemy {
+    left: -50vw;
+    opacity: 0;
+}
+
+/*Cells*/
+.cell {
+    height: 3.6vw;
+    width: 3.6vw;
+    transition: 0.2s;
+    border: solid var(--nord0);
+    border-width: 0.2vw;
+    border-radius: 0.5vw;
+    margin: auto;
+    background-color: var(--nord10);
+    font-size: 0.2vw;
+}
+
+.cell:hover {
+    background-color: var(--nord9);
+}
+
+.cell:hover .cellCoordinate {
+    opacity: 1;
+}
+
+@font-face {
+    font-family: "VT323-Regular";
+    src: url('VT323-Regular.ttf')
+}
+
+.cellCoordinate {
+    position: center;
+    transition: 0.2s;
+    color: var(--nord2);
+    text-align: center;
+    font-family: 'VT323-Regular', serif;
+    opacity: 0;
+}
+
+.ship {
+    border-color: var(--nord2);
+    background-color: var(--nord0);
+}
+
+.ship:hover {
+    background-color: var(--nord1);
+}
+
+.shipHit {
+    background-color: var(--nord11);
+    border-color: var(--nord0);
+    cursor: default;
+    pointer-events: none;
+}
+
+.cellHit {
+    background-color: var(--nord2);
+    cursor: default;
+    pointer-events: none;
+}
+
+.deactivate {
+    pointer-events: none;
+}
+
+/*Animations*/
+.fadeout {
+    animation-name: fadeout-animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.fadein {
+    animation-name: fadein-animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout-animation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

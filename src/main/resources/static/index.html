@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Battleships</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="boardContainer" id="boardContainer">
+    <button class="menuButton gameCreate text" id="gameCreate" onclick="createGame()">Create game</button>
+    <button class="menuButton gameJoin text" id="gameJoin" onclick="getGameIDFromPlayer()">Join game</button>
+</div>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
