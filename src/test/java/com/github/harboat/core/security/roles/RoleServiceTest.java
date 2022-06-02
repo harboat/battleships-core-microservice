@@ -1,5 +1,6 @@
 package com.github.harboat.core.security.roles;
 
+import com.github.harboat.clients.exceptions.InternalServerError;
 import com.github.harboat.clients.exceptions.ResourceAlreadyExists;
 import com.github.harboat.clients.exceptions.ResourceNotFound;
 import com.github.harboat.core.GenericResponseDto;
@@ -89,4 +90,48 @@ public class RoleServiceTest {
         roleService.get(name);
         //then
     }
+
+    @Test(expectedExceptions = ResourceNotFound.class)
+    public void deleteShouldThrowWhenThereIsNoSuchRole() {
+        //given
+        String name = "role";
+        given(repository.findByName(name)).willReturn(Optional.empty());
+        roleService.delete(name);
+        //then
+    }
+
+    @Test
+    public void deleteShouldReturnProperDTO() {
+        //given
+        String name = "role";
+        Role role = Role.builder()
+                .name(name)
+                .grade(1)
+                .authorities(new ArrayList<>())
+                .build();
+        //when
+        given(repository.findByName(name)).willReturn(Optional.of(role));
+        var actual = roleService.delete(name);
+        //then
+        assertEquals(actual, new GenericResponseDto("Successfully deleted role with name: " + name));
+    }
+
+    @Test(expectedExceptions = InternalServerError.class)
+    public void updateShouldThrow() throws InternalServerError {
+        //given
+        //when
+        roleService.update(null,null);
+        //then
+    }
+
+    @Test(expectedExceptions = InternalServerError.class, expectedExceptionsMessageRegExp = "Could not find role for user")
+    public void getBasicUserRoleShouldThrow() throws InternalServerError {
+        //given
+        given(repository.findByAuthoritiesContains(any())).willReturn(Optional.empty());
+        //when
+        roleService.getBasicUserRole();
+        //then
+    }
+
+
 }
