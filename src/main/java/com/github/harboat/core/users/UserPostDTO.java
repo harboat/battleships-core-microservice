@@ -1,14 +1,13 @@
 package com.github.harboat.core.users;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @NoArgsConstructor @Getter @Setter
+@AllArgsConstructor
 public class UserPostDTO {
 
     @NotEmpty
