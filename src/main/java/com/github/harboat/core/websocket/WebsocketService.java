@@ -1,6 +1,7 @@
 package com.github.harboat.core.websocket;
 
 import com.github.harboat.clients.notification.EventType;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -11,6 +12,7 @@ import java.util.LinkedHashMap;
 
 @Service
 @RequiredArgsConstructor
+@SuppressFBWarnings(value = "EI_EXPOSE_REP2")
 public class WebsocketService {
     private final SimpMessagingTemplate messagingTemplate;
     @Value("${broker.destination-prefix}")

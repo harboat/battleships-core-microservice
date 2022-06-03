@@ -1,5 +1,6 @@
 package com.github.harboat.core.security;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -11,6 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @EnableWebSecurity
 @AllArgsConstructor
+@SuppressFBWarnings(value = "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION")
 class WebSecurityConfigurerImpl extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;

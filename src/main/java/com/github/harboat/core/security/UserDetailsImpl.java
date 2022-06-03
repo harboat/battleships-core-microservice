@@ -2,6 +2,7 @@ package com.github.harboat.core.security;
 
 import com.github.harboat.core.security.roles.Role;
 import com.github.harboat.core.users.User;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.HashSet;
 
+@SuppressFBWarnings(value = "SE_BAD_FIELD")
 class UserDetailsImpl implements UserDetails {
 
     private final String username;

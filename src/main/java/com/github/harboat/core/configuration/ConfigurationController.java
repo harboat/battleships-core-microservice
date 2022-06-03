@@ -1,6 +1,7 @@
 package com.github.harboat.core.configuration;
 
 import com.github.harboat.clients.game.Size;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,6 +15,7 @@ import javax.validation.Valid;
 @Validated
 @RequestMapping("/api/v1/rooms/{roomId}")
 @AllArgsConstructor
+@SuppressFBWarnings(value = "EI_EXPOSE_REP2")
 public class ConfigurationController {
 
     private ConfigurationService configurationService;
