@@ -2,6 +2,7 @@ package com.github.harboat.core.users;
 
 import com.github.harboat.clients.exceptions.InternalServerError;
 import com.github.harboat.core.GenericResponseDto;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -12,6 +13,7 @@ import javax.validation.Valid;
 @Validated
 @RestController
 @RequestMapping("/api/v1/users")
+@SuppressFBWarnings(value = "EI_EXPOSE_REP2")
 public class UserController {
 
     private final UserService service;

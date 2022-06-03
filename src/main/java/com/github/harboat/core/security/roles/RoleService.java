@@ -6,6 +6,7 @@ import com.github.harboat.clients.exceptions.ResourceNotFound;
 import com.github.harboat.core.GenericCRUDService;
 import com.github.harboat.core.GenericResponseDto;
 import com.github.harboat.core.security.authorities.AuthorityService;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.Collection;
 
 @Service
 @AllArgsConstructor
+@SuppressFBWarnings(value = "EI_EXPOSE_REP2")
 public class RoleService implements GenericCRUDService<RoleDTO, RoleDTO, RoleDTO, GenericResponseDto> {
 
     private final RoleRepository repository;

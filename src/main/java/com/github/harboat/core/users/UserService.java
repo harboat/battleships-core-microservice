@@ -5,6 +5,7 @@ import com.github.harboat.clients.exceptions.ResourceAlreadyExists;
 import com.github.harboat.clients.exceptions.ResourceNotFound;
 import com.github.harboat.core.GenericResponseDto;
 import com.github.harboat.core.security.roles.RoleService;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 
 @Service
 @AllArgsConstructor
+@SuppressFBWarnings(value = "EI_EXPOSE_REP2")
 public class UserService {
 
     private final UserRepository repository;

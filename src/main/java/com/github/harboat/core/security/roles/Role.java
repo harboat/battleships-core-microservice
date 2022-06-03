@@ -1,6 +1,7 @@
 package com.github.harboat.core.security.roles;
 
 import com.github.harboat.core.security.authorities.Authority;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -13,6 +14,7 @@ import java.util.Collection;
 @AllArgsConstructor @NoArgsConstructor @RequiredArgsConstructor
 @Getter @Setter @ToString
 @Builder
+@SuppressFBWarnings(value = "EI_EXPOSE_REP")
 public class Role {
 
     @Id

@@ -11,6 +11,7 @@ import com.github.harboat.core.configuration.ConfigurationService;
 import com.github.harboat.core.games.GameService;
 import com.github.harboat.core.rooms.RoomService;
 import com.github.harboat.core.shot.ShotService;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.AllArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -22,6 +23,7 @@ import org.springframework.stereotype.Component;
 @RabbitListener(
         queues = {"${rabbitmq.queues.core}"}
 )
+@SuppressFBWarnings(value = "EI_EXPOSE_REP2")
 public class CoreQueueConsumer {
 
     private RoomService roomService;
